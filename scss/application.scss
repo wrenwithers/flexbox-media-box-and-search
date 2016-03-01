@@ -1,0 +1,80 @@
+
+
+.hide {
+  display: none;
+}
+
+
+.example-layout{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 300px);
+}
+
+
+
+  header,
+  footer {
+    padding: 20px;
+    background: #666;
+    color: white;
+  }
+
+  .body {
+    display: flex;
+    flex-grow: 1;
+    background: pink;
+  }
+
+    .col-1 {
+      background: lightblue;
+      flex-grow: 1;
+    }
+
+    .col-2 {
+      background: honeydew;
+      width: 160px;
+      order: -1;
+    }
+
+    .col-3 {
+      background: peachpuff;
+      width: 160px;
+    }
+
+  @media (max-width: 800px)
+  {
+    .body {
+      flex-direction: column;
+    }
+
+      .col-2, .col-3 {
+        width: auto;
+      }
+    }
+
+/*****************media box*************/
+
+
+  .example-media {
+    .media, .search-group {
+        display: flex;
+        max-width: 600px;
+      }
+      img {
+        margin-right: 10px;
+      }
+      .content {
+        flex: 1;
+      }
+
+      input {
+        padding: 10px;
+        &[type="text"] {
+          flex:1;
+        }
+      }
+  }
+
+// /*****************search box**********
+  // see addition of .search-group above and addition of input specs //
